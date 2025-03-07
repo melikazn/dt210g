@@ -1,54 +1,12 @@
-# React + TypeScript + Vite
+# Filmer och Serier - React Applikation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Beskrivning
 
-Currently, two official plugins are available:
+Denna applikation är en enkel React-applikation byggd med TypeScript, där användaren kan se en lista över filmer och serier tillsammans med deras utgivningsår och status (om filmen är sedd eller inte). Projektet är skapad som en del av kursen "Fördjupad frontend-utveckling" och uppfyller kraven för att använda React, JSX, props, iteration och dynamisk rendering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Funktioner:
+- **Dynamisk lista**: Filmer och serier renderas från en array med objekt och visas med hjälp av komponenter.
+- **Conditional rendering**: Filmer som är sedda markeras med ett checkmark, medan de osedda visas med ett kryss.
+- **Responsiv design**: Webbplatsen är designad för att vara responsiv och fungerar bra på både stora och små skärmar.
+- **Komponentspecifik CSS**: Varje komponent har sin egen CSS, vilket gör applikationen modulär och lätt att underhålla.
+- **Enkel navigering**: Sidhuvudet och sidfoten gör webbplatsens struktur tydlig och informativ.
